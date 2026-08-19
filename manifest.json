@@ -1,7 +1,7 @@
 {
   "id": "shedinja_expanded_bridge",
   "name": "Shedinja Expanded Bridge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "entry": "main.lua",
   "api": 2,
   "game_version": ">=0.2.3 <1.0.0",
@@ -11,8 +11,16 @@
   "affects_link": true,
   "permissions": ["engine_internals"],
   "dependencies": [
-    "expanded_species@>=0.6.5 <2.0.0",
-    "gen1_shedinja@>=0.1.7 <1.0.0"
+    {
+      "id": "expanded_species",
+      "range": ">=0.6.5 <2.0.0",
+      "github": "mistermiracle3036/Expanded-Species"
+    },
+    {
+      "id": "gen1_shedinja",
+      "range": ">=0.1.10 <1.0.0",
+      "github": "inmento/Gen1-Shedinja"
+    }
   ],
   "github": "inmento/Shedinja-Expanded-Bridge",
   "description": "Gold-only compatibility bridge that lets Shedinja coexist with Expanded Species while preserving Shedinja's National Dex and virtual species identity at #292."
