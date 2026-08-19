@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 — Shedinja package identity migration
+
+This release updates the Gold-only bridge to require the renamed **Shedinja 0.2.0+** package identity rather than the retired `gen1_shedinja` identifier. Expanded Species integration, virtual #292 repair, palette restoration, party icon restoration, and sparse Pokédex ordering are otherwise unchanged.
+
 ## 0.1.1 — Current-API dependency declarations
 
 Validated against Gen1Recomp **0.2.10**. The bridge now declares explicit repository-hinted hard dependencies on **Expanded Species** and **Shedinja 0.1.10 or later**, allowing the launcher to identify the exact required public repositories. The bridge remains Gold-only and does not load unless both required mods are present and active.

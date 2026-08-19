@@ -11,8 +11,8 @@ Install and enable all three mods in Gold:
 | Mod | Required version | Role |
 |---|---:|---|
 | [Expanded Species](https://github.com/mistermiracle3036/Expanded-Species) | 0.6.5–1.x | Custom-species framework and safe-save support. |
-| [Shedinja](https://github.com/inmento/Gen1-Shedinja) | 0.1.7–0.x | Shedinja’s species data, sprites, animation, encounters, Wonder Guard, and one-HP behavior. |
-| Shedinja Expanded Bridge | 0.1.0 | Framework-aware #292 identity and sparse Pokédex compatibility. |
+| [Shedinja](https://github.com/inmento/Gen1-Shedinja) | 0.2.0+ | Shedinja’s species data, sprites, animation, encounters, Wonder Guard, and one-HP behavior. |
+| Shedinja Expanded Bridge | 0.1.2+ | Framework-aware #292 identity and sparse Pokédex compatibility. |
 
 > Do not enable this bridge without both required mods. The launcher enforces both dependencies.
 

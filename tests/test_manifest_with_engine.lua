@@ -5,7 +5,7 @@ local Manifest = require("src.mods.Manifest")
 local raw = {
   id = "shedinja_expanded_bridge",
   name = "Shedinja Expanded Bridge",
-  version = "0.1.1",
+  version = "0.1.2",
   api = 2,
   entry = "main.lua",
   profile = "content",
@@ -21,8 +21,8 @@ local raw = {
       github = "mistermiracle3036/Expanded-Species",
     },
     {
-      id = "gen1_shedinja",
-      range = ">=0.1.10 <1.0.0",
+      id = "shedninja",
+      range = ">=0.2.0 <1.0.0",
       github = "inmento/Gen1-Shedinja",
     },
   },
@@ -36,7 +36,7 @@ assert(manifest.gen2compat == true and not manifest.gen1compat,
 assert(#manifest.dependencySpecs == 2, "bridge must declare both required mods")
 assert(manifest.dependencySpecs[1].id == "expanded_species"
   and manifest.dependencySpecs[1].github == "mistermiracle3036/Expanded-Species"
-  and manifest.dependencySpecs[2].id == "gen1_shedinja"
+  and manifest.dependencySpecs[2].id == "shedninja"
   and manifest.dependencySpecs[2].github == "inmento/Gen1-Shedinja",
   "bridge dependency IDs or repository sources changed unexpectedly")
 print("bridge v0.2.10 engine manifest test passed")

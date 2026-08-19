@@ -1,7 +1,7 @@
 {
   "id": "shedinja_expanded_bridge",
   "name": "Shedinja Expanded Bridge",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "entry": "main.lua",
   "api": 2,
   "game_version": ">=0.2.3 <1.0.0",
@@ -17,8 +17,8 @@
       "github": "mistermiracle3036/Expanded-Species"
     },
     {
-      "id": "gen1_shedinja",
-      "range": ">=0.1.10 <1.0.0",
+      "id": "shedninja",
+      "range": ">=0.2.0 <1.0.0",
       "github": "inmento/Gen1-Shedinja"
     }
   ],

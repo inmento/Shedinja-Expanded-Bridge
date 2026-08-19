@@ -62,7 +62,7 @@ local mod = {
   game = game,
   find = function(first, second)
     local id = second or first
-    if id == "gen1_shedinja" then return core end
+    if id == "shedninja" then return core end
     if id == "expanded_species" then return framework end
     return nil
   end,
@@ -88,7 +88,7 @@ local mod = {
 
 local bridge = assert(loadfile("main.lua"))()(mod)
 assert(pokemon.SHEDINJA.expandedSpecies
-  and pokemon.SHEDINJA.expandedSpecies.provider == "gen1_shedinja"
+  and pokemon.SHEDINJA.expandedSpecies.provider == "shedninja"
   and pokemon.SHEDINJA.expandedSpecies.requestedDex == 292,
   "bridge must mark core Shedinja as an Expanded Species provider record")
 assert(type(screenRecords.Gen2PokedexMenu) == "table",

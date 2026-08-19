@@ -11,7 +11,7 @@ return function(mod)
   if GameVersion.get() ~= "gold" then return {} end
 
   local SHEDINJA = "SHEDINJA"
-  local CORE_MOD = "gen1_shedinja"
+  local CORE_MOD = "shedninja"
   local FRAMEWORK_MOD = "expanded_species"
   local VIRTUAL_INDEX = 292
   local ICON_ID = "ICON_GEN1_SHEDINJA"
