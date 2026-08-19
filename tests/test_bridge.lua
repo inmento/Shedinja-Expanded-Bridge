@@ -87,6 +87,10 @@ local mod = {
 }
 
 local bridge = assert(loadfile("main.lua"))()(mod)
+assert(bridge.mode == "expanded_species",
+  "unified bridge must select its Gold Expanded Species path when that framework is active")
+assert(bridge.repairAfterCrystal == nil,
+  "Gold must not install the Crystal 251 repair path")
 assert(pokemon.SHEDINJA.expandedSpecies
   and pokemon.SHEDINJA.expandedSpecies.provider == "shedninja"
   and pokemon.SHEDINJA.expandedSpecies.requestedDex == 292,

@@ -1,31 +1,31 @@
-# Shedinja Expanded Bridge
+# Shedinja Compatibility Bridge
 
-**Shedinja Expanded Bridge** is a **Gold-only** compatibility add-on for using the standalone **Shedinja** mod together with **Expanded Species**.
+**Shedinja Compatibility Bridge** is the single optional companion for the core [Shedinja](https://github.com/inmento/Gen1-Shedinja) mod. It detects the active game and supported framework, then activates only the compatibility repair that applies. It is safe to leave enabled with core Shedinja even when neither supported framework is installed.
 
-It is intentionally a third mod rather than a required dependency of core Shedinja. Red, Blue, and Yellow never load this bridge and retain Shedinja’s standard standalone behavior. Gold players who do not install the bridge likewise retain core Shedinja’s standard Gold slot and behavior.
+| Active game and framework | Bridge behavior |
+|---|---|
+| Red, Blue, or Yellow with no Crystal 251 | The bridge is inert; standalone Shedinja remains at its standard internal slot 152 and visible National Dex #292. |
+| Red, Blue, or Yellow with Crystal 251 | The bridge moves Shedinja to Crystal-safe internal index 252, preserves visible #292, supplies genderless metadata, and adds Shedinja’s split stats to Crystal 251’s live runtime table. |
+| Gold with no Expanded Species | The bridge is inert; standalone Shedinja retains its normal Gold behavior. |
+| Gold with Expanded Species | The bridge preserves Shedinja’s framework-aware virtual/runtime identity and visible National Dex #292, restores its palette and menu icon, and fixes sparse OLD/National Pokédex ordering. |
 
-## Required mods
+## Installation
 
-Install and enable all three mods in Gold:
+Core Shedinja is the bridge’s only hard requirement. Install it once, then enable this bridge only if you want one of the optional framework paths below.
 
-| Mod | Required version | Role |
-|---|---:|---|
-| [Expanded Species](https://github.com/mistermiracle3036/Expanded-Species) | 0.6.5–1.x | Custom-species framework and safe-save support. |
-| [Shedinja](https://github.com/inmento/Gen1-Shedinja) | 0.2.0+ | Shedinja’s species data, sprites, animation, encounters, Wonder Guard, and one-HP behavior. |
-| Shedinja Expanded Bridge | 0.1.2+ | Framework-aware #292 identity and sparse Pokédex compatibility. |
+| Configuration | Also install and enable |
+|---|---|
+| Crystal 251 in Red, Blue, or Yellow | [Crystal 251](https://github.com/Deftones565/gen1recomp-mod-crystal-251) 0.11.3+ and a completed Crystal 251 ROM import. |
+| Expanded Species in Gold | [Expanded Species](https://github.com/mistermiracle3036/Expanded-Species) 0.6.5+. |
 
-> Do not enable this bridge without both required mods. The launcher enforces both dependencies.
+The bridge does **not** make either external framework mandatory. It does not load Gold-only framework code in Red, Blue, or Yellow, and it does not load Crystal 251 code in Gold.
 
-## What the bridge changes in Gold
+## Safety behavior
 
-Expanded Species normally allocates custom Pokémon sequentially starting at #252. This bridge marks Shedinja as a framework-owned custom species, then reserves both Shedinja’s **virtual internal index** and every player-visible Dex number as **#292** after the framework finishes its normal setup. This lets Shedinja retain its official number while other Expanded Species packs use their own slots.
+The Gold path refuses to use virtual index 292 if another active Expanded Species record already owns it. The Crystal path refuses to use index 252 if another active Gen 1 record already owns it. Those guards prevent two species from silently sharing a runtime identity.
 
-The bridge also restores Shedinja’s credited core palette and party icon after Expanded Species installs its custom-species visuals. Its Gold Pokédex wrapper fixes the native sparse-number ordering path so valid National Dex entries such as #292 remain visible in the OLD/National list.
-
-## Important limit
-
-The bridge refuses to remap Shedinja if another active custom species already owns virtual index 292. This is a deliberate safety guard: two distinct species must never share one runtime index.
+> **Save caution:** Crystal 251 uses internal index 252 for Shedinja, while standalone R/B/Y uses index 152. Do not move a save containing Shedinja between those two configurations without moving Shedinja out of party and PC first.
 
 ## Attribution
 
-This bridge contains no copied Pokémon artwork. It reuses the assets registered by core Shedinja. See that project’s `CREDITS.md` for the complete BouncingPiplup and nuukiie / Nuuk attribution and license information.
+This bridge contains no copied Pokémon artwork. It reuses assets registered by core Shedinja. See the core project’s `CREDITS.md` for BouncingPiplup and nuukiie / Nuuk attribution and licensing details.

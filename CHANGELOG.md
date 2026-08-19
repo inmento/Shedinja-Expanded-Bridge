@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 — Unified compatibility bridge
+
+The bridge now supports both of Shedinja’s framework compatibility paths in one mod. In **Gold**, it remains an optional Expanded Species integration that restores framework-aware #292 identity, palette, party icon, and sparse OLD/National Pokédex ordering. In **Red, Blue, and Yellow**, it optionally detects Crystal 251, moves Shedinja to Crystal-safe index 252, preserves visible #292, and supplies Crystal split-stat plus genderless metadata.
+
+Core Shedinja is the only hard dependency. Expanded Species and Crystal 251 are now separately optional and game-scoped, so the bridge remains inert on ordinary standalone installations. This retires the need for a separate Crystal 251-specific Shedinja bridge.
+
 ## 0.1.2 — Shedinja package identity migration
 
 This release updates the Gold-only bridge to require the renamed **Shedinja 0.2.0+** package identity rather than the retired `gen1_shedinja` identifier. Expanded Species integration, virtual #292 repair, palette restoration, party icon restoration, and sparse Pokédex ordering are otherwise unchanged.
