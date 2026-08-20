@@ -259,9 +259,9 @@ return function(mod)
 
   local playing = GameVersion.get()
   local repairAfterFramework, repairAfterCrystal, mode
-  if playing == "gold" then
+  if GameVersion.generation(playing) == 2 then
     repairAfterFramework = installGoldExpanded()
-    mode = repairAfterFramework and "expanded_species" or "standalone_gold"
+    mode = repairAfterFramework and "expanded_species" or "standalone_gen2"
   else
     repairAfterCrystal = installCrystal251()
     mode = repairAfterCrystal and "crystal_251" or "standalone_gen1"

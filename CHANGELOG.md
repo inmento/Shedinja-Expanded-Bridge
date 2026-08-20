@@ -1,6 +1,12 @@
 # Changelog
 
 
+## 0.1.5 — Silver support
+
+The unified bridge now recognizes **Pokémon Silver** as Generation 2. Silver therefore follows the same intended Gen 2 decision as Gold: it remains inert when Expanded Species is absent and uses the Expanded Species #292 identity, palette, icon, and sparse Pokédex repair when that optional framework is active. It no longer incorrectly enters the Gen 1 Crystal 251 path.
+
+This is a direct root-cause correction using Gen1Recomp’s shared `GameVersion.generation()` contract, rather than a separate Silver compatibility layer. A dedicated Silver routing harness and the complete bridge suite pass.
+
 ## 0.1.4 — Corrected core package identity
 
 The bridge now requires core **`shedinja` 0.3.0+**, replacing the misspelled `shedninja` package ID. Its own stable bridge ID remains `shedinja_expanded_bridge`. This metadata-only migration keeps the Gold Expanded Species and Gen 1 Crystal 251 bridge behaviors unchanged while restoring correct loader ordering for the renamed core package.

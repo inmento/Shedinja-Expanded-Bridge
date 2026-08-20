@@ -1,7 +1,7 @@
 {
   "id": "shedinja_expanded_bridge",
   "name": "Shedinja Compatibility Bridge",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "github": "inmento/Shedinja-Expanded-Bridge",
   "entry": "main.lua",
   "api": 2,
@@ -32,5 +32,5 @@
       "games": ["gen1"]
     }
   ],
-  "description": "Unified compatibility bridge for core Shedinja: repairs #292 framework identity with Expanded Species in Gold and Crystal-safe index 252 plus Crystal runtime metadata in Red, Blue, and Yellow when Crystal 251 is active."
+  "description": "Unified compatibility bridge for core Shedinja: repairs #292 framework identity with Expanded Species in Gold and Silver, and supplies Crystal-safe index 252 plus Crystal runtime metadata in Red, Blue, and Yellow when Crystal 251 is active."
 }
