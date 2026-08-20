@@ -3,11 +3,12 @@ package.path = "/home/ubuntu/reference_gen1recomp0210_source/?.lua;/home/ubuntu/
 
 local Manifest = require("src.mods.Manifest")
 local ModTargets = require("src.mods.ModTargets")
+local Semver = require("src.mods.Semver")
 
 local raw = {
   id = "shedinja_expanded_bridge",
   name = "Shedinja Compatibility Bridge",
-  version = "0.1.3",
+  version = "0.1.5",
   github = "inmento/Shedinja-Expanded-Bridge",
   api = 2,
   entry = "main.lua",
@@ -20,7 +21,7 @@ local raw = {
   dependencies = {
     {
       id = "shedinja",
-      range = ">=0.2.0 <1.0.0",
+      range = ">=0.3.0 <1.0.0",
       github = "inmento/Shedinja",
     },
   },
@@ -43,16 +44,20 @@ local raw = {
 
 local manifest = Manifest.validate(raw, root)
 assert(manifest.id == "shedinja_expanded_bridge")
-assert(manifest.version == "0.1.3")
+assert(manifest.version == "0.1.5")
 assert(manifest.github == "inmento/Shedinja-Expanded-Bridge")
 assert(manifest.gen2compat == true
   and ModTargets.supports(manifest, "red", 1)
-  and ModTargets.supports(manifest, "gold", 2),
-  "unified bridge must target both Gen 1 and Gold")
+  and ModTargets.supports(manifest, "gold", 2)
+  and ModTargets.supports(manifest, "silver", 2),
+  "unified bridge must target Gen 1 plus both Gold and Silver")
 assert(#manifest.dependencySpecs == 1
   and manifest.dependencySpecs[1].id == "shedinja"
   and manifest.dependencySpecs[1].github == "inmento/Shedinja",
   "core Shedinja must remain the bridge's only hard requirement")
+assert(Semver.satisfies("0.3.4", manifest.dependencySpecs[1].range)
+  and Semver.satisfies("0.3.5", manifest.dependencySpecs[1].range),
+  "the core range must accept both the installed 0.3.4 and current 0.3.5 Shedinja releases")
 assert(#manifest.optionalSpecs == 2,
   "supported external frameworks must remain independently optional")
 
@@ -63,11 +68,12 @@ for _, spec in ipairs(manifest.optionalSpecs) do
 end
 assert(expanded and expanded.github == "mistermiracle3036/Expanded-Species"
   and ModTargets.specApplies(expanded, "gold", 2)
+  and ModTargets.specApplies(expanded, "silver", 2)
   and not ModTargets.specApplies(expanded, "red", 1),
-  "Expanded Species must be an optional Gold-only framework")
+  "Expanded Species must be an optional Gold-and-Silver framework")
 assert(crystal and crystal.github == "Deftones565/gen1recomp-mod-crystal-251"
   and ModTargets.specApplies(crystal, "red", 1)
   and not ModTargets.specApplies(crystal, "gold", 2),
   "Crystal 251 must be an optional Gen 1-only framework")
 
-print("unified bridge v0.2.10 engine manifest test passed")
+print("unified bridge engine manifest and core-version-range test passed")
