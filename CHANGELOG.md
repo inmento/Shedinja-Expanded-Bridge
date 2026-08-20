@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 0.1.4 — Corrected core package identity
+
+The bridge now requires core **`shedinja` 0.3.0+**, replacing the misspelled `shedninja` package ID. Its own stable bridge ID remains `shedinja_expanded_bridge`. This metadata-only migration keeps the Gold Expanded Species and Gen 1 Crystal 251 bridge behaviors unchanged while restoring correct loader ordering for the renamed core package.
+
 ## 0.1.3 — Unified compatibility bridge
 
 The bridge now supports both of Shedinja’s framework compatibility paths in one mod. In **Gold**, it remains an optional Expanded Species integration that restores framework-aware #292 identity, palette, party icon, and sparse OLD/National Pokédex ordering. In **Red, Blue, and Yellow**, it optionally detects Crystal 251, moves Shedinja to Crystal-safe index 252, preserves visible #292, and supplies Crystal split-stat plus genderless metadata.

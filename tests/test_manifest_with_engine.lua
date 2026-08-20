@@ -19,9 +19,9 @@ local raw = {
   affects_link = true,
   dependencies = {
     {
-      id = "shedninja",
+      id = "shedinja",
       range = ">=0.2.0 <1.0.0",
-      github = "inmento/Gen1-Shedinja",
+      github = "inmento/Shedinja",
     },
   },
   optional_dependencies = {
@@ -50,8 +50,8 @@ assert(manifest.gen2compat == true
   and ModTargets.supports(manifest, "gold", 2),
   "unified bridge must target both Gen 1 and Gold")
 assert(#manifest.dependencySpecs == 1
-  and manifest.dependencySpecs[1].id == "shedninja"
-  and manifest.dependencySpecs[1].github == "inmento/Gen1-Shedinja",
+  and manifest.dependencySpecs[1].id == "shedinja"
+  and manifest.dependencySpecs[1].github == "inmento/Shedinja",
   "core Shedinja must remain the bridge's only hard requirement")
 assert(#manifest.optionalSpecs == 2,
   "supported external frameworks must remain independently optional")

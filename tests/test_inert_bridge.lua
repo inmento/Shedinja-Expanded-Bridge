@@ -9,7 +9,7 @@ local mod = {
   id = "shedinja_expanded_bridge",
   find = function(first, second)
     local id = second or first
-    if id == "shedninja" then return core end
+    if id == "shedinja" then return core end
     return nil
   end,
   content = {

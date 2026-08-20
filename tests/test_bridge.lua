@@ -62,7 +62,7 @@ local mod = {
   game = game,
   find = function(first, second)
     local id = second or first
-    if id == "shedninja" then return core end
+    if id == "shedinja" then return core end
     if id == "expanded_species" then return framework end
     return nil
   end,
@@ -92,7 +92,7 @@ assert(bridge.mode == "expanded_species",
 assert(bridge.repairAfterCrystal == nil,
   "Gold must not install the Crystal 251 repair path")
 assert(pokemon.SHEDINJA.expandedSpecies
-  and pokemon.SHEDINJA.expandedSpecies.provider == "shedninja"
+  and pokemon.SHEDINJA.expandedSpecies.provider == "shedinja"
   and pokemon.SHEDINJA.expandedSpecies.requestedDex == 292,
   "bridge must mark core Shedinja as an Expanded Species provider record")
 assert(type(screenRecords.Gen2PokedexMenu) == "table",

@@ -13,7 +13,7 @@ return function(mod)
   local GameVersion = require("src.core.GameVersion")
 
   local SHEDINJA = "SHEDINJA"
-  local CORE_MOD = "shedninja"
+  local CORE_MOD = "shedinja"
   local EXPANDED_MOD = "expanded_species"
   local CRYSTAL_MOD = "CRYSTAL_251"
   local NATIONAL_DEX = 292

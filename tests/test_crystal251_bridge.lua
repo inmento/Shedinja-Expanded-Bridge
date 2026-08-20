@@ -40,7 +40,7 @@ local mod = {
   game = game,
   find = function(first, second)
     local id = second or first
-    if id == "shedninja" then return core end
+    if id == "shedinja" then return core end
     if id == "CRYSTAL_251" then return crystal end
     return nil
   end,

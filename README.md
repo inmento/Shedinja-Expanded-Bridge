@@ -1,6 +1,6 @@
 # Shedinja Compatibility Bridge
 
-**Shedinja Compatibility Bridge** is the single optional companion for the core [Shedinja](https://github.com/inmento/Gen1-Shedinja) mod. It detects the active game and supported framework, then activates only the compatibility repair that applies. It is safe to leave enabled with core Shedinja even when neither supported framework is installed.
+**Shedinja Compatibility Bridge** is the single optional companion for the core [Shedinja](https://github.com/inmento/Shedinja) mod. It detects the active game and supported framework, then activates only the compatibility repair that applies. It is safe to leave enabled with core Shedinja even when neither supported framework is installed.
 
 | Active game and framework | Bridge behavior |
 |---|---|
