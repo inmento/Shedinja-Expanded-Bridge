@@ -2,7 +2,7 @@
 --
 -- One optional companion for core Shedinja. The bridge is deliberately inert
 -- unless the active game's supported roster framework is present:
---   * Gold + Expanded Species: preserve Shedinja's framework-owned #292 slot.
+--   * Gen 2 + Expanded Species: preserve Shedinja's framework-owned #292 slot.
 --   * R/B/Y + Crystal 251: move Shedinja from Crystal's occupied slot 152 to
 --     Crystal-safe slot 252, retaining National Dex #292 and Crystal metadata.
 --
@@ -64,7 +64,7 @@ return function(mod)
     }
   end
 
-  local function installGoldExpanded()
+  local function installGen2Expanded()
     local framework = mod.find(EXPANDED_MOD)
     if not framework then return nil end
     assert(framework.exports and type(framework.exports.getApi) == "function",
@@ -89,7 +89,7 @@ return function(mod)
       },
     })
 
-    -- Gold's builtin OLD/National Pokedex traverses sparse numeric entries with
+    -- The Gen 2 builtin OLD/National Pokedex traverses sparse numeric entries with
     -- ipairs. This wrapper supplies a complete sorted order only for OLD mode.
     local BasePokedex = require("src.ui.gen2.PokedexMenu")
     mod.content.screens:register("Gen2PokedexMenu", {
@@ -260,7 +260,7 @@ return function(mod)
   local playing = GameVersion.get()
   local repairAfterFramework, repairAfterCrystal, mode
   if GameVersion.generation(playing) == 2 then
-    repairAfterFramework = installGoldExpanded()
+    repairAfterFramework = installGen2Expanded()
     mode = repairAfterFramework and "expanded_species" or "standalone_gen2"
   else
     repairAfterCrystal = installCrystal251()

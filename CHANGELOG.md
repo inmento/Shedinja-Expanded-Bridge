@@ -1,6 +1,12 @@
 # Changelog
 
 
+## 0.2.0 — Native Crystal support
+
+The bridge now supports **native Pokémon Crystal** on Gen1Recomp `0.2.24` and later. Crystal follows the existing Generation 2 Expanded Species decision: it is inert without Expanded Species and preserves Shedinja’s framework-owned #292 identity, Pokédex entry, normal/shiny palette, party icon, and sparse OLD/National ordering when that optional framework is active.
+
+The native Gen 2 installer has been renamed from Gold-specific terminology to `installGen2Expanded`. Dedicated Crystal entry and full Expanded Species regressions verify the Crystal engine identifier, standalone Gen 2 route, #292 repair, visual restoration, Pokédex ordering, and the fact that native Crystal never activates the separate **Gen 1 Crystal 251** path. No Crystal ROM data or assets are included.
+
 ## 0.1.5 — Silver support
 
 The unified bridge now recognizes **Pokémon Silver** as Generation 2. Silver therefore follows the same intended Gen 2 decision as Gold: it remains inert when Expanded Species is absent and uses the Expanded Species #292 identity, palette, icon, and sparse Pokédex repair when that optional framework is active. It no longer incorrectly enters the Gen 1 Crystal 251 path.
