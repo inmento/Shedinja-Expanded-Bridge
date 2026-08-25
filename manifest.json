@@ -1,16 +1,21 @@
 {
   "id": "shedinja_expanded_bridge",
   "name": "Shedinja Compatibility Bridge",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "github": "inmento/Shedinja-Expanded-Bridge",
   "entry": "main.lua",
   "api": 2,
-  "game_version": ">=0.2.24 <1.0.0",
+  "game_version": ">=0.2.18 <1.0.0",
   "category": "COMPATIBILITY",
   "profile": "content",
-  "games": ["gen1", "gen2"],
+  "games": [
+    "gen1",
+    "gen2"
+  ],
   "affects_link": true,
-  "permissions": ["engine_internals"],
+  "permissions": [
+    "engine_internals"
+  ],
   "dependencies": [
     {
       "id": "shedinja",
@@ -23,13 +28,17 @@
       "id": "expanded_species",
       "range": ">=0.6.5 <2.0.0",
       "github": "mistermiracle3036/Expanded-Species",
-      "games": ["gen2"]
+      "games": [
+        "gen2"
+      ]
     },
     {
       "id": "CRYSTAL_251",
       "range": ">=0.11.3 <1.0.0",
       "github": "Deftones565/gen1recomp-mod-crystal-251",
-      "games": ["gen1"]
+      "games": [
+        "gen1"
+      ]
     }
   ],
   "description": "Unified compatibility bridge for core Shedinja: repairs #292 framework identity with Expanded Species in Gold, Silver, and Crystal, and separately supplies Crystal 251-safe index 252 plus runtime metadata in Red, Blue, and Yellow when the Gen 1 Crystal 251 framework is active."
