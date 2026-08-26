@@ -29,3 +29,7 @@ The native Gen 2 Expanded Species path refuses to use virtual index 292 if anoth
 ## Attribution
 
 This bridge contains no copied Pokémon artwork. It reuses assets registered by core Shedinja. See the core project’s `CREDITS.md` for BouncingPiplup and nuukiie / Nuuk attribution and licensing details.
+
+## License
+
+Unless a file or third-party notice says otherwise, this repository's original source code, configuration, tests, and documentation are licensed under the [MIT License](LICENSE). Read [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for attribution guidance and third-party, asset, user-supplied-source, and game-IP boundaries.
