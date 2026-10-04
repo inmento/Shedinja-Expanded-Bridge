@@ -5,7 +5,7 @@
   "github": "inmento/Shedinja-Expanded-Bridge",
   "entry": "main.lua",
   "api": 2,
-  "game_version": ">=0.2.18 <1.0.0",
+  "game_version": ">=0.3.51 <1.0.0",
   "category": "COMPATIBILITY",
   "profile": "content",
   "games": [
